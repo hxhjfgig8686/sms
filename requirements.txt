@@ -4,3 +4,4 @@ beautifulsoup4
 cloudscraper
 brotli
 lxml
+gunicorn
