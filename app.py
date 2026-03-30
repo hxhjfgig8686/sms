@@ -12,9 +12,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger(__name__)
 
 BASE_URL      = "https://www.ivasms.com"
-IVAS_EMAIL    = os.environ.get('IVAS_EMAIL',    'hiahemdhh@gmail.com')
-IVAS_PASSWORD = os.environ.get('IVAS_PASSWORD', 'Hh1234Hh')
-COOKIES_ENV   = os.environ.get('COOKIES_JSON',  '_fbp=fb.1.1771360375347.952287327218288030; cf_clearance=3CcSozPZ1LFQiFqNQKZmtLcJUPUwWXSh7N1eEvOCkVU-1772685350-1.2.1.1-hhjgvbY5QeJ64sLKHgkg1NIOw3_MbIG8BfXM8aBhsTCpr4QT6t80SzqCGxf6LA63okRvVyQrEAEoHqYfFjdC0l4CsbhBBEpyyOGxCCBQDEvnXW36kGBF1mqDawvzoOLyakaZJjnMMT3oOmiX24P7wDaE_.GguSbNFB9Fc8X2J5ALUAMMiVk1GJR_SDATvu8.M0mNlSXBBxJqNet5s_ep6U5wal9O9g_0kAb.Jc4Phxs; XSRF-TOKEN=eyJpdiI6IkRxQy9BRjVPb2h5dDhnbGZ3UzkyM3c9PSIsInZhbHVlIjoiQWJ0RnF6ODE1MXRjU1BRbXF4OHdFMlhRTXpkU0xaSjB3cTY3cHVvVEVlMEZtWkpCTnB1a21neEYxbmx3YkFNTG9JVVBzT3ZqaEltWTUxaEx2TDkvUVkrU2VsVkdWRi9VaVFZbGlrZnFoNG9hWGhUZTRYR0NLVHFndjRzTmc5blUiLCJtYWMiOiJlZjZjZTljODgxYjAzNDI0OWY1MjA0MzQ3ZDJjYjFlMDk5NmU4ZWIyYjUwMzBkMWMwZjQzMDQ1MDA0ZDA1Y2EzIiwidGFnIjoiIn0%3D; ivas_sms_session=eyJpdiI6IlJoTlFKMEN1SXVzUXZFOWlnajZWaXc9PSIsInZhbHVlIjoiSXZreHdEZ2k3eUJBVVJHRTh4VU1GNUExYkIzajM2QjB5T2toMnZjdk9mam9iT201TG8vZGE0TmhNRTNta285RC9KQW1mSHJJMlVpVEc0NlZrVURZdmFJWmc0SGpIS2hWWWh5bE1PMitjUlBCWC9FNHFJU1llNUxxa2IzTkx4VkEiLCJtYWMiOiJiYjYyNzJlMTVmMjFjOGNhZTU2NDE2MDczNzg5MmUzNGFhY2IwNDI3NzNiZDRhZjJjYzI2OTM3N2E2YTljYWZiIiwidGFnIjoiIn0%3D')
+IVAS_EMAIL    = os.environ.get('IVAS_EMAIL',    'usa19721986@gmail.com')
+IVAS_PASSWORD = os.environ.get('IVAS_PASSWORD', 'Amin@1972')
+COOKIES_ENV   = os.environ.get('COOKIES_JSON',  '')
 
 class IVASClient:
     def __init__(self):
@@ -345,4 +345,5 @@ def debug_html(p):
     return (r.text if r else "no response"),200,{'Content-Type':'text/html; charset=utf-8'}
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get("PORT", 10000))
+app.run(host="0.0.0.0", port=port)
